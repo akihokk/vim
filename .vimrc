@@ -5,15 +5,18 @@ set number
 " 自動インデント
 set autoindent
  " オートインデント
-set smartindent 
-" タブ、空白、改行を可視化
-set list
+set smartindent
+"バックフアップファイルを作成しない
+set nobackup
+"スワップファイルを作成しない
+set noswapfile
 " 不可視文字の指定
-set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮
- "カーソルの形状を変更
+set list listchars=tab:¦_,eol:↲
+hi SpecialKey ctermfg=black
+"カーソルの形状を変更
 let &t_ti.="\e[5 q" 
 "インデントをスペース2つ分に設定
-set tabstop=4
+set tabstop=2
 "自動的に入力されたインデントの空白を2つ分に設定
 set shiftwidth=2
 set cursorline
@@ -58,3 +61,4 @@ inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
+syntax on
